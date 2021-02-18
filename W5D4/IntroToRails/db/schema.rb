@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_065930) do
     t.integer "house_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["house_id"], name: "index_people_on_house_id"
   end
 
 end

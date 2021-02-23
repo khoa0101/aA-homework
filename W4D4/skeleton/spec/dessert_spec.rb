@@ -43,7 +43,8 @@ describe Dessert do
       expect(brownie.ingredients).to eq(ingredients)
       brownie.mix!
       expect(brownie.ingredients).not_to eq(ingredients)
-      expect(brownie.ingredients.sort).to eq(ingredients.sort) 
+      expect(brownie.ingredients.sort).to eq(ingredients.sort)
+      
     end
   end
 
@@ -66,7 +67,7 @@ describe Dessert do
 
   describe "#make_more" do
     it "calls bake on the dessert's chef with the dessert passed in" do
-      allow(chef).to receive(:bake).with(brownie)
+      # allow(chef).to receive(:bake).with(brownie)
       brownie.make_more
     end
   end
